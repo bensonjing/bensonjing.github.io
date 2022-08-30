@@ -1,4 +1,8 @@
 function Header() {
+  const goToHome = (e) => {
+    window.location.replace("/#header");
+  };
+
   const goToContact = (e) => {
     e.preventDefault();
     window.location.replace("/#contact");
@@ -6,11 +10,8 @@ function Header() {
 
   return (
     <div id="header">
-      <div>BJ</div>
+      <div onClick={(e) => goToHome(e)}>Home</div>
       <div>
-        <a href="https://github.com/bensonjing" target="_blank">
-          GitHub
-        </a>
         <div onClick={(e) => goToContact(e)}>Contact Me</div>
       </div>
     </div>
