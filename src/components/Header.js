@@ -1,13 +1,19 @@
 function Header() {
   return (
     <div id="header">
-      <div onClick={() => window.location.replace("#header")}>Home</div>
+      <h2 onClick={() => window.location.replace("#header")}>Home</h2>
       <div>
-        <div onClick={() => window.location.replace("#skills")}>Skills</div>
-        <div onClick={() => window.location.replace("#projects")}>Projects</div>
-        <div onClick={() => window.location.replace("#contact")}>Contact</div>
+        <button onClick={() => window.location.replace("#skills")}>
+          Skills
+        </button>
+        <button onClick={() => window.location.replace("#projects")}>
+          Projects
+        </button>
+        <button onClick={() => window.location.replace("#contact")}>
+          Contact
+        </button>
         {/* TODO: link resume to file */}
-        <div>Resume</div>
+        <button>Resume</button>
       </div>
     </div>
   );
