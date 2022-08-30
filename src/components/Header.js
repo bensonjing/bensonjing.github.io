@@ -1,18 +1,13 @@
 function Header() {
-  const goToHome = (e) => {
-    window.location.replace("/#header");
-  };
-
-  const goToContact = (e) => {
-    e.preventDefault();
-    window.location.replace("/#contact");
-  };
-
   return (
     <div id="header">
-      <div onClick={(e) => goToHome(e)}>Home</div>
+      <div onClick={() => window.location.replace("#header")}>Home</div>
       <div>
-        <div onClick={(e) => goToContact(e)}>Contact Me</div>
+        <div onClick={() => window.location.replace("#skills")}>Skills</div>
+        <div onClick={() => window.location.replace("#projects")}>Projects</div>
+        <div onClick={() => window.location.replace("#contact")}>Contact</div>
+        {/* TODO: link resume to file */}
+        <div>Resume</div>
       </div>
     </div>
   );
