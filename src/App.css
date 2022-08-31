@@ -47,6 +47,23 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  text-align: center;
+  margin: 40px 0;
+}
+
+h3 {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--primary-light);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 5px 0;
 }
 
 /* Header */
@@ -83,4 +100,14 @@ h2 {
 #avatar {
   margin-top: 50px;
   height: 300px; 
+}
+
+/* Skills */
+#skills {
+  text-align: center;
+}
+
+#lists {
+  display: flex;
+  justify-content: space-around;
 }
