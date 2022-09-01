@@ -1,7 +1,7 @@
 function Header() {
   return (
     <div id="header">
-      <h2 onClick={() => window.location.replace("#header")}>Home</h2>
+      <h2 onClick={() => window.location.replace("#intro")}>Home</h2>
       <div id="right">
         <button onClick={() => window.location.replace("#skills")}>
           Skills
