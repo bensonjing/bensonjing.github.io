@@ -109,6 +109,7 @@ li {
 /* Skills */
 #skills {
   text-align: center;
+  margin-bottom: 20vh;
 }
 
 #lists {
@@ -127,4 +128,54 @@ li {
   flex-direction: column; 
   gap: 20px;
   font-size: 1.5rem;
+}
+
+/* Projects */
+#projects {
+  text-align: center;
+  margin-bottom: 20vh;
+}
+
+#board {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); 
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project .links {
+  display: flex; 
+  gap: 10px;
+  justify-content: center;
+}
+
+.project a{
+  padding: 5px 10px;
+  font-size: .8rem;
+  border: solid 1px black; 
+  border-radius: 10px;
+  background-color: white;
+  color: var(--primary-dark);
+}
+
+.project a:hover {
+  color: var(--primary-light);
+}
+
+#github{
+  background-color: white; 
+  color: var(--primary-dark);
+  padding: 5px 20px; 
+  border-radius: 10px;
 }
