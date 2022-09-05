@@ -14,7 +14,7 @@ function Skills() {
         </ul>
         <ul id="technologies">
           <h3>Technologies</h3>
-          <li>ReactJS</li>
+          <li>ReactJS/Native</li>
           <li>NodeJS</li>
           <li>Express</li>
           <li>MongoDB</li>

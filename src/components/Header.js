@@ -1,3 +1,5 @@
+import resume from "../assets/resume.pdf";
+
 function Header() {
   return (
     <div id="header">
@@ -12,8 +14,9 @@ function Header() {
         <button onClick={() => window.location.replace("#contact")}>
           Contact
         </button>
-        {/* TODO: link resume to file */}
-        <button>Resume</button>
+        <a href={resume} target="_blank" rel="noreferrer">
+          Resume
+        </a>
       </div>
     </div>
   );
