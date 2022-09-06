@@ -17,12 +17,14 @@ function Blog() {
   return (
     <div id="blog">
       <h2>Blog</h2>
-      {posts.map((post) => (
-        <Link key={post._id} to={`/posts/${post._id}`}>
-          <div>{post.title}</div>
-          <button>View Post</button>
-        </Link>
-      ))}
+      <div id="posts">
+        {posts.map((post) => (
+          <Link key={post._id} to={`/posts/${post._id}`} className="post">
+            <div>{post.title}</div>
+            <button>View Post</button>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

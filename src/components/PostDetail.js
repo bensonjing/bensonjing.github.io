@@ -18,9 +18,9 @@ function PostDetail() {
   };
 
   return (
-    <div>
+    <div className="post_detail">
       <h1>{post.title}</h1>
-      <div>{post.author.username}</div>
+      <div className="author">{post.author.username}</div>
       <div>{post.content}</div>
       <Comments id={postId} />
     </div>
