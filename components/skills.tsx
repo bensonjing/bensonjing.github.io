@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Skills() {
   return (
-    <div>
+    <section>
       <header>
         <h1>Skills</h1>
       </header>
@@ -75,6 +75,6 @@ export default function Skills() {
           </ul>
         </article>
       </section>
-    </div>
+    </section>
   );
 }
