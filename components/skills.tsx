@@ -1,55 +1,55 @@
 import Image from 'next/image';
 
-export default function Skills() {
-  return (
-    <section>
-      <header>
-        <h1>Skills</h1>
-      </header>
+import styles from '../styles/Skills.module.css';
 
-      <section>
+export default function Skills() {
+  const languages = [
+    'Python',
+    'C++',
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'TypeScript',
+    'Java',
+  ];
+
+  const technologies = [
+    'React.js',
+    'React Native',
+    'Next.js',
+    'Express',
+    'Node.js',
+    'MongoDB',
+    'Flask',
+  ];
+
+  const tools = [
+    'Git/Github',
+    'npm',
+    'Webpack',
+    'Heroku',
+    'Vercel',
+    'VScode',
+    'Vim/Neovim',
+  ];
+
+  return (
+    <section className={styles.container}>
+      <h1 className={styles.title}>Skills</h1>
+
+      <div className={styles.skills}>
         <article>
-          <h3>Languages</h3>
-          <ul>
-            <li>
-              <Image
-                src='/icon/python.svg'
-                alt='python'
-                width='32'
-                height='32'
-              />
-              <p>Python</p>
-            </li>
-            <li>
-              <Image src='/icon/c++.svg' alt='c++' width='32' height='32' />
-              <p>C++</p>
-            </li>
-            <li>
-              <Image src='/icon/html5.svg' alt='html5' width='32' height='32' />
-              <p>HTML5</p>
-            </li>
-            <li>
-              <Image src='/icon/css3.svg' alt='css3' width='32' height='32' />
-              <p>CSS3</p>
-            </li>
-            <li>
-              <Image src='/icon/js.svg' alt='js' width='32' height='32' />
-              <p>JavaScript</p>
-            </li>
-            <li>
-              <Image src='/icon/ts.svg' alt='ts' width='32' height='32' />
-              <p>TypeScript</p>
-            </li>
-            <li>
-              <Image src='/icon/java.svg' alt='java' width='32' height='32' />
-              <p>Java</p>
-            </li>
-          </ul>
+          <h3 className={styles.subtitle}>Languages</h3>
+          <div className={styles.card}>
+            {languages.map((item) => (
+              <SkillContainer name={item} key={item} />
+            ))}
+          </div>
         </article>
 
         <article>
-          <h3>Technologies</h3>
-          <ul>
+          <h3 className={styles.subtitle}>Technologies</h3>
+          <ul className={styles.card}>
             <li>React.js</li>
             <li>React Native</li>
             <li>Next.js</li>
@@ -62,8 +62,8 @@ export default function Skills() {
         </article>
 
         <article>
-          <h3>Tools</h3>
-          <ul>
+          <h3 className={styles.subtitle}>Tools</h3>
+          <ul className={styles.card}>
             <li>Git/GitHub</li>
             <li>npm</li>
             <li>Webpack</li>
@@ -74,7 +74,21 @@ export default function Skills() {
             <li>Terminal/Zsh</li>
           </ul>
         </article>
-      </section>
+      </div>
     </section>
+  );
+}
+
+function SkillContainer({ name }: { name: string }) {
+  return (
+    <div className={styles.skillContainer} data-line={name}>
+      <Image
+        src={`/icon/${name}.svg`}
+        alt={name}
+        width='48'
+        height='48'
+        layout='fixed'
+      />
+    </div>
   );
 }

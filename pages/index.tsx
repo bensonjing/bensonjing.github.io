@@ -4,9 +4,11 @@ import Intro from '../components/intro';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
 
+import styles from '../styles/Home.module.css';
+
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Benson Jing</title>
       </Head>

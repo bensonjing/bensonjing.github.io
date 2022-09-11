@@ -1,0 +1,82 @@
+.container {
+  width: 75vw;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subtitle {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  gap: 4rem;
+}
+
+.skillContainer {
+  padding: 0.8em 1em;
+  border-radius: 0.5em;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-light);
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.2s;
+}
+
+.skillContainer:hover {
+  bottom: 20px;
+}
+
+.skillContainer::before {
+  content: attr(data-line);
+  position: absolute;
+  top: 4em;
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+.skillContainer:hover::before {
+  opacity: 1;
+  transform: translateY(100%);
+}
+
+@keyframes SKILL-REVEAL {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(70%);
+  }
+  20% {
+    opacity: 0.7;
+    transform: translateY(80%);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(120%);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translateY(90%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
