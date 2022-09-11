@@ -3,79 +3,68 @@ import Image from 'next/image';
 import styles from '../styles/Skills.module.css';
 
 export default function Skills() {
-  const languages = [
-    'Python',
-    'C++',
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'TypeScript',
-    'Java',
+  const skillSets = [
+    {
+      languages: [
+        'Python',
+        'C++',
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'TypeScript',
+        'Java',
+      ],
+    },
+    {
+      technologies: [
+        'React.js',
+        'Next.js',
+        'Express',
+        'Node.js',
+        'MongoDB',
+        'Flask',
+        'Firebase',
+      ],
+    },
+    {
+      tools: [
+        'Github',
+        'npm',
+        'Webpack',
+        'Heroku',
+        'Vercel',
+        'VScode',
+        'Neovim',
+      ],
+    },
   ];
-
-  const technologies = [
-    'React.js',
-    'React Native',
-    'Next.js',
-    'Express',
-    'Node.js',
-    'MongoDB',
-    'Flask',
-  ];
-
-  const tools = [
-    'Git/Github',
-    'npm',
-    'Webpack',
-    'Heroku',
-    'Vercel',
-    'VScode',
-    'Vim/Neovim',
-  ];
-
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Skills</h1>
 
       <div className={styles.skills}>
-        <article>
-          <h3 className={styles.subtitle}>Languages</h3>
-          <div className={styles.card}>
-            {languages.map((item) => (
-              <SkillContainer name={item} key={item} />
-            ))}
-          </div>
-        </article>
-
-        <article>
-          <h3 className={styles.subtitle}>Technologies</h3>
-          <ul className={styles.card}>
-            <li>React.js</li>
-            <li>React Native</li>
-            <li>Next.js</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Mongoose</li>
-            <li>PassportJS</li>
-            <li>Flask</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 className={styles.subtitle}>Tools</h3>
-          <ul className={styles.card}>
-            <li>Git/GitHub</li>
-            <li>npm</li>
-            <li>Webpack</li>
-            <li>Heroku</li>
-            <li>Vercel</li>
-            <li>VScode</li>
-            <li>Vim/Neovim</li>
-            <li>Terminal/Zsh</li>
-          </ul>
-        </article>
+        {skillSets.map((set) => {
+          console.log(Object.keys(set));
+          const name = Object.keys(set)[0];
+          console.log(Object.values(set[name]));
+          const skills = Object.values(set)[0];
+          return <SkillSet name={name} skills={skills} key={name} />;
+        })}
       </div>
     </section>
+  );
+}
+
+function SkillSet({ name, skills }: { name: string; skills: string[] }) {
+  return (
+    <article>
+      <h3 className={styles.subtitle}>{name}</h3>
+      <div className={styles.card}>
+        {skills.map((skill) => (
+          <SkillContainer name={skill} key={skill} />
+        ))}
+      </div>
+    </article>
   );
 }
 

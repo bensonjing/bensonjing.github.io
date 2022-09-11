@@ -1,6 +1,6 @@
 .container {
   width: 75vw;
-  margin: 5vh auto;
+  margin: 15vh auto;
   display: flex;
   flex-direction: column;
 }
@@ -42,6 +42,7 @@
 }
 
 .skillContainer::before {
+  width: 100%;
   content: attr(data-line);
   position: absolute;
   top: 4em;
