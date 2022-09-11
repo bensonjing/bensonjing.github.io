@@ -1,0 +1,47 @@
+.container {
+  width: 75vw;
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  margin-inline-end: 2rem;
+}
+
+.main {
+  margin: 20vh 0;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.5em 1.5em;
+  font-size: 15px;
+  border-radius: 0.5em;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-light);
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}

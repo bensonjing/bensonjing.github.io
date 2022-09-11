@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+:root {
+  --primary-light: #eaeae8;
+  --secondary-light: #bfbfbb;
+  --primary-dark: #585756;
+  --secondary-dark: #898886;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--primary-light);
 }
 
 a {

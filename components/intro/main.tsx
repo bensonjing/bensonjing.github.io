@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import styles from '../../styles/Intro.module.css';
+
 interface LinkInfo {
   href: string;
   logo: string;
@@ -27,19 +29,19 @@ export default function Main() {
   ];
 
   return (
-    <section>
-      <h1>Benson Jing</h1>
+    <section className={styles.main}>
+      <h1 className={styles.title}>Benson Jing</h1>
       <div>
-        <p>
+        <p className={styles.description}>
           Software Developer & Full-Stack Developer
           <br />
           Sophomore Student at University of California, Irvine
         </p>
       </div>
-      <div>
+      <div className={styles.links}>
         <Link href='/resume.pdf' target='_blank' rel='noreferrer'>
           <a target='_blank' rel='noreferrer'>
-            <button>Resume</button>
+            <button className={styles.button}>Resume</button>
           </a>
         </Link>
         {externalLinks.map((link) => (
@@ -54,7 +56,7 @@ function ExternalLink({ href, logo, alt }: LinkInfo) {
   return (
     <Link href={href}>
       <a target='_blank' rel='noreferrer'>
-        <Image src={logo} alt={alt} width='32' height='32' />
+        <Image src={logo} alt={alt} width='24' height='24' />
       </a>
     </Link>
   );

@@ -1,11 +1,13 @@
-import Header from './header';
+import Nav from './nav';
 import Main from './main';
+
+import styles from '../../styles/Intro.module.css';
 
 export default function Intro() {
   return (
-    <section>
-      <Header />
+    <header className={styles.container}>
+      <Nav />
       <Main />
-    </section>
+    </header>
   );
 }

@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Header() {
+import styles from '../../styles/Intro.module.css';
+
+export default function Nav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <Link href='/'>
-        <a>
+        <a className={styles.logo}>
           <Image src='/logo-light.svg' alt='logo' width='64' height='64' />
         </a>
       </Link>
