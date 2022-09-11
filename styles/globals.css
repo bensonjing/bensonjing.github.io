@@ -32,6 +32,13 @@ li {
   box-sizing: border-box;
 }
 
+.container {
+  width: 75vw;
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: dark;

@@ -39,7 +39,7 @@ export default function Skills() {
     },
   ];
   return (
-    <section className={styles.container}>
+    <section className='container'>
       <h1 className={styles.title}>Skills</h1>
 
       <div className={styles.skills}>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import ProjectDetail from './project_detail';
+import styles from '../styles/Project.module.css';
 
 export interface project {
   image: string;
@@ -38,18 +39,20 @@ export default function Projects() {
   ];
 
   return (
-    <section>
-      <h3>Projects</h3>
-      <div>
+    <section className='container'>
+      <h3 className={styles.title}>Projects</h3>
+      <div className={styles.projects}>
         {projects.map((projectInfo: project) => (
           <ProjectDetail {...projectInfo} key={projectInfo.name} />
         ))}
       </div>
-      <Link href='https://github.com/bensonjing/'>
-        <a target='_blank' rel='noreferrer'>
-          <button>More On GitHub</button>
-        </a>
-      </Link>
+      <div className={styles.github}>
+        <Link href='https://github.com/bensonjing/'>
+          <a target='_blank' rel='noreferrer'>
+            <button className={styles.button}>More On GitHub</button>
+          </a>
+        </Link>
+      </div>
     </section>
   );
 }

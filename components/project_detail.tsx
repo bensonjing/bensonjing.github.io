@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import type { project } from './projects';
+import styles from '../styles/Project.module.css';
 
 export default function ProjectDetail({
   image,
@@ -11,19 +12,21 @@ export default function ProjectDetail({
   code,
 }: project) {
   return (
-    <article>
-      <Image src={image} alt={name} width='128' height='128' />
-      <div>
-        <h3>{name}</h3>
-        <p>{description}</p>
+    <article className={styles.detail}>
+      <img src={image} alt={name} />
+      <div className={styles.text}>
         <div>
+          <h3>{name}</h3>
+          <p>{description}</p>
+        </div>
+        <div className={styles.link}>
           <Link href={link}>
             <a target='_blank' rel='noreferrer'>
               <Image
                 src='/icon/external-link.svg'
                 alt='live'
-                width='16'
-                height='16'
+                width='24'
+                height='24'
               />
             </a>
           </Link>
@@ -32,8 +35,8 @@ export default function ProjectDetail({
               <Image
                 src='/icon/github-light.png'
                 alt='code'
-                width='16'
-                height='16'
+                width='24'
+                height='24'
               />
             </a>
           </Link>
