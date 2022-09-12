@@ -55,7 +55,7 @@ export default function Main() {
 function ExternalLink({ href, logo, alt }: LinkInfo) {
   return (
     <Link href={href}>
-      <a target='_blank' rel='noreferrer'>
+      <a className={styles.link} target='_blank' rel='noreferrer'>
         <Image src={logo} alt={alt} width='24' height='24' />
       </a>
     </Link>
