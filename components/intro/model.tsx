@@ -2,6 +2,7 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import * as THREE from 'three';
 
 import styles from '../../styles/Intro.module.css';
 
@@ -18,10 +19,10 @@ export default function Model() {
 
 function Scene() {
   const gltf = useLoader(GLTFLoader, '/model/Astronaut.gltf');
-  const boxRef = useRef();
+  const boxRef = useRef<THREE.Mesh>();
 
   useFrame(() => {
-    boxRef.current.rotation.y += 0.005;
+    boxRef.current!.rotation.y += 0.005;
   });
 
   return (
