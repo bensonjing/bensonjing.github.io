@@ -7,5 +7,5 @@ Visit the website at [www.bensonjing.com](https://www.bensonjing.com)
 
 ## Feature
 
-- Built with ReactJS
+- Built with Next.js, Module CSS, and Three.js
 - Integrate with [Blog API](https://github.com/bensonjing/blog-api)
