@@ -44,9 +44,7 @@ export default function Skills() {
 
       <div className={styles.skills}>
         {skillSets.map((set) => {
-          console.log(Object.keys(set));
           const name = Object.keys(set)[0];
-          console.log(Object.values(set[name]));
           const skills = Object.values(set)[0];
           return <SkillSet name={name} skills={skills} key={name} />;
         })}

@@ -15,8 +15,14 @@
   margin-inline-end: 2rem;
 }
 
+.intro {
+  display: flex;
+  gap: 5vw;
+}
+
 .main {
   margin: 20vh 0;
+  width: 40vw;
 }
 
 .title {
@@ -59,4 +65,8 @@
 .button:hover {
   border: 1px solid white;
   box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
+
+.model {
+  width: 25vw;
 }
