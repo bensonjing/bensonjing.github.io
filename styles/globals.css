@@ -38,13 +38,3 @@ li {
   display: flex;
   flex-direction: column;
 }
-
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
