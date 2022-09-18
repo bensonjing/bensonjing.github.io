@@ -18,13 +18,13 @@ export default function Nav() {
         </a>
       </Link>
       <Link href='#skills'>
-        <a>Skills</a>
+        <a className={styles.navLink}>Skills</a>
       </Link>
       <Link href='#projects'>
-        <a>Projects</a>
+        <a className={styles.navLink}>Projects</a>
       </Link>
       <Link href='/blog'>
-        <a target='_blank' rel='noreferrer'>
+        <a target='_blank' rel='noreferrer' className={styles.navLink}>
           Blog
         </a>
       </Link>

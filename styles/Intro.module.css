@@ -15,6 +15,14 @@
   margin-inline-end: 2rem;
 }
 
+.navLink {
+  padding: 0.2em 0;
+}
+
+.navLink:hover {
+  border-bottom: 1px solid black;
+}
+
 .intro {
   display: flex;
   gap: 10vw;
@@ -75,6 +83,10 @@
 @media (orientation: portrait) {
   .container {
     margin: 5vh auto;
+  }
+
+  .logo {
+    margin: 0;
   }
 
   .intro {
