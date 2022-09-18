@@ -8,7 +8,13 @@ export default function Nav() {
     <nav className={styles.nav}>
       <Link href='/'>
         <a className={styles.logo}>
-          <Image src='/logo-light.svg' alt='logo' width='64' height='64' />
+          <Image
+            src='/logo-light.svg'
+            alt='logo'
+            width='64'
+            height='64'
+            layout='fixed'
+          />
         </a>
       </Link>
       <Link href='#skills'>
