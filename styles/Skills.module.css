@@ -15,6 +15,7 @@
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 
@@ -46,31 +47,4 @@
 .skillContainer:hover::before {
   opacity: 1;
   transform: translateY(100%);
-}
-
-@keyframes SKILL-REVEAL {
-  0% {
-    opacity: 0;
-    transform: translateY(40%);
-  }
-  10% {
-    opacity: 0.6;
-    transform: translateY(70%);
-  }
-  20% {
-    opacity: 0.7;
-    transform: translateY(80%);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(120%);
-  }
-  90% {
-    opacity: 0.9;
-    transform: translateY(90%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(100%);
-  }
 }

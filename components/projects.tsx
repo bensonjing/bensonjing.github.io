@@ -36,10 +36,18 @@ export default function Projects() {
       link: 'https://github.com/bensonjing/chem-app-client/',
       code: 'https://github.com/bensonjing/chem-app-api/',
     },
+    {
+      image: '/logo-dark.svg',
+      name: 'Bouncing Ball Game',
+      description:
+        'a game in which user can create different ball objects and interact with each other',
+      link: 'https://github.com/bensonjing/bouncing-ball-game/',
+      code: 'https://github.com/bensonjing/bouncing-ball-game/',
+    },
   ];
 
   return (
-    <section className='container'>
+    <section className='container' id='projects'>
       <h3 className={styles.title}>Projects</h3>
       <div className={styles.projects}>
         {projects.map((projectInfo: project) => (

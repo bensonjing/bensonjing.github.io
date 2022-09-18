@@ -5,7 +5,7 @@ import styles from '../../styles/Intro.module.css';
 
 export default function Intro() {
   return (
-    <header className='container'>
+    <header className={styles.container}>
       <Nav />
       <div className={styles.intro}>
         <Main />
