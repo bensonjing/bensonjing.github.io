@@ -1,15 +1,21 @@
+import { getPosts } from '../../lib/posts';
+
 export default function Blog({ posts }) {
   return (
     <div>
       {posts.map((post) => (
-        <div key={post._id}>{post.title}</div>
+        <div key={post.id}>
+          <div>{post.title}</div>
+          <div>{post.abstract}</div>
+          <div>{post.date}</div>
+        </div>
       ))}
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://benson-blog-api.herokuapp.com/api/posts');
-  const posts = await res.json();
+  const posts = getPosts();
+
   return { props: { posts } };
 }
