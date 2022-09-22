@@ -17,16 +17,14 @@ export default function Nav() {
           />
         </a>
       </Link>
-      <Link href='#skills'>
+      <Link href='/#skills'>
         <a className={styles.navLink}>Skills</a>
       </Link>
-      <Link href='#projects'>
+      <Link href='/#projects'>
         <a className={styles.navLink}>Projects</a>
       </Link>
       <Link href='/blog'>
-        <a target='_blank' rel='noreferrer' className={styles.navLink}>
-          Blog
-        </a>
+        <a className={styles.navLink}>Blog</a>
       </Link>
     </nav>
   );
