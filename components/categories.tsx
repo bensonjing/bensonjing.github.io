@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import styles from '../styles/Blog.module.css';
+
 export default function Categories() {
   const categories = [
     {
@@ -17,9 +19,9 @@ export default function Categories() {
   ];
 
   return (
-    <div>
-      <h2>CATEGORIES</h2>
-      <ul>
+    <div className={styles.categories}>
+      <p className={styles.main_title}>CATEGORIES</p>
+      <ul className={styles.categories_titles}>
         {categories.map((category) => (
           <li key={category.name}>
             <CategoryLink name={category.name} href={category.href} />
@@ -33,7 +35,7 @@ export default function Categories() {
 function CategoryLink({ name, href }) {
   return (
     <Link href={href}>
-      <a>{name}</a>
+      <a className={styles.category}>{name}</a>
     </Link>
   );
 }

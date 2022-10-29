@@ -21,9 +21,9 @@ export function getPosts() {
   });
 
   return postsData.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
+    if (a > b) {
       return 1;
-    } else if (a > b) {
+    } else if (a < b) {
       return -1;
     } else {
       return 0;
