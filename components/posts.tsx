@@ -9,7 +9,7 @@ export default function Posts({ posts }) {
       <ul>
         {posts.map((post) => (
           <li key={post.id} className={styles.post}>
-            <Link href={`/posts/${post.id}`}>
+            <Link href={`/blog/${post.id}`}>
               <div className={styles.post_link}>
                 <h2 className={styles.post_title}>{post.title}</h2>
                 <div className={styles.post_abstract}>{post.abstract}</div>
