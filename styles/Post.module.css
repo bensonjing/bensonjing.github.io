@@ -1,0 +1,11 @@
+.container {
+  max-width: 75vw;
+  margin: 2vh auto 5vh auto;
+  display: flex;
+  gap: 5vw;
+}
+
+.post {
+  max-width: 75vw;
+  margin: 0 auto;
+}

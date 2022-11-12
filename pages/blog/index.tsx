@@ -20,9 +20,6 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getPosts().sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
+  const posts = getPosts();
   return { props: { posts } };
 }
