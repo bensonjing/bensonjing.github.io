@@ -7,8 +7,10 @@ import html from 'remark-html';
 const postsDir = path.join(process.cwd(), 'posts');
 
 export function getPosts() {
+  let posts: { id: string }[] = [];
+
   const fileNames = fs.readdirSync(postsDir).filter((name) => name[0] != '.');
-  const postsData = fileNames.map((fileName) => {
+  fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
     const fullPath = path.join(postsDir, fileName);
@@ -16,13 +18,17 @@ export function getPosts() {
 
     const matterResult = matter(fileContent);
 
-    return {
-      id,
-      ...matterResult.data,
-    };
+    if (matterResult.data.published) {
+      posts.push({
+        id,
+        ...matterResult.data,
+      });
+    }
   });
 
-  return postsData;
+  console.log(posts);
+
+  return posts;
 }
 
 export function getPostIds() {
