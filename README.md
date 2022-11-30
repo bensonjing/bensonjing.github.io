@@ -17,3 +17,10 @@ Visit the website at [www.bensonjing.com](https://www.bensonjing.com)
   - [x] Find a tool that can render markdown into HTML (remark / markdoc)
   - [x] Use css to styles markdown
 - [ ] Set up development server displaying unpublished posts
+- [ ] Move blog posts into MongoDB
+- [ ] Sort post by descending date order
+- [ ] Display date on blog posts
+
+## Notes  
+Insperation for blog:  
+- [Anders Aarvik](https://aarvik.dk/)

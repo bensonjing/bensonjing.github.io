@@ -4,7 +4,7 @@ abstract: A detailed explination of how I use neovim to edit markdown
 introduction: Vim/Neovim has the power of quick navigation, fast editing etc. It's hard to go back to other markdown editors after using Neovim. However, Neovim doesn't look that good straigh out of the box. So here's my twists. 
 category: WebDev
 published: true
-date: null
+date: 11/30/2022
 ---
 
 ## Soft Wrap vs Hard Wrap 
@@ -12,12 +12,12 @@ date: null
 **Hard wrap**: the editor addes a new line `\n` at defined width.  
 **Soft wrap**: the editor makes the text looks like its on another line when reached the edge, but it's actually still one very long line.  
 
-Hard wrap is easy to navigate since it break a long sentence into multiple lines so that we can use `j/k` to navigate to different part of that sentence.  
+Hard wrap is easy to navigate since it break a long sentence into multiple lines so that we can use `j` or `k` to navigate to different part of that sentence.  
 *gif here*  
 However, when you delete in the middle of the paragraph, the later text won't follow, breaking the paragraph.  
 *gif here*  
 
-Soft wrap is the opposite. It will maintain the paragraph, but hard to navigate inside long paragraph. You will have to hold `w/b`. For me, this trade off is worth it.  
+Soft wrap is the opposite. It will maintain the paragraph, but hard to navigate inside long paragraph. You will have to hold `w` or `b`. For me, this trade off is worth it.  
 *gif here*
 
 ## Enabling Soft Wrap 
