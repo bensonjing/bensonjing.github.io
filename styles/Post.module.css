@@ -8,4 +8,22 @@
 .post {
   max-width: 75vw;
   margin: 0 auto;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.title {
+	text-align: center; 
+	margin: 7vh 0;
+}
+
+.body h2 {
+	border-bottom: 2px black solid;
+}
+
+.body pre {
+	font-family: Monaco, sans-serif;
+	border: 1.5px solid black;
+	border-radius: 10px;
+	padding: 1rem;
 }

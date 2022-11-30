@@ -13,6 +13,7 @@ Visit the website at [www.bensonjing.com](https://www.bensonjing.com)
 ## TODO
 
 - [x] Hide unpublished posts
-- [ ] Style posts
-  - [ ] Find a tool that can render markdown into HTML
-  - [ ] Use css to styles markdown
+- [x] Style posts
+  - [x] Find a tool that can render markdown into HTML (remark / markdoc)
+  - [x] Use css to styles markdown
+- [ ] Set up development server displaying unpublished posts

@@ -1,65 +1,61 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import Markdoc from '@markdoc/markdoc';
 
 const postsDir = path.join(process.cwd(), 'posts');
 
 export function getPosts() {
-  let posts: { id: string }[] = [];
+	let posts: { id: string }[] = [];
 
-  const fileNames = fs.readdirSync(postsDir).filter((name) => name[0] != '.');
-  fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, '');
+	const fileNames = fs.readdirSync(postsDir).filter((name) => name[0] != '.');
+	fileNames.map((fileName) => {
+		const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(postsDir, fileName);
-    const fileContent = fs.readFileSync(fullPath, 'utf-8');
+		const fullPath = path.join(postsDir, fileName);
+		const fileContent = fs.readFileSync(fullPath, 'utf-8');
 
-    const matterResult = matter(fileContent);
+		const matterResult = matter(fileContent);
 
-    if (matterResult.data.published) {
-      posts.push({
-        id,
-        ...matterResult.data,
-      });
-    }
-  });
+		if (matterResult.data.published) {
+			posts.push({
+				id,
+				...matterResult.data,
+			});
+		}
+	});
 
-  console.log(posts);
-
-  return posts;
+	return posts;
 }
 
 export function getPostIds() {
-  const fileNames = fs.readdirSync(postsDir).filter((name) => name[0] != '.');
+	const fileNames = fs.readdirSync(postsDir).filter((name) => name[0] != '.');
 
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ''),
-      },
-    };
-  });
+	return fileNames.map((fileName) => {
+		return {
+			params: {
+				id: fileName.replace(/\.md$/, ''),
+			},
+		};
+	});
 }
 
 export async function getPostData(id) {
-  const fullPath = path.join(postsDir, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+	const fullPath = path.join(postsDir, `${id}.md`);
+	const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+	// convert markdown to html using Markdoc
+	const ast = Markdoc.parse(fileContents)
+	const content = Markdoc.transform(ast)
+	const htmlContent = Markdoc.renderers.html(content)
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+	// Use gray-matter to parse the post metadata section
+	const matterResult = matter(fileContents);
 
-  // Combine the data with the id and contentHtml
-  return {
-    id,
-    contentHtml,
-    ...matterResult.data,
-  };
+	// Combine the data with the id and contentHtml
+	return {
+		id,
+		htmlContent,
+		...matterResult.data,
+	};
 }
