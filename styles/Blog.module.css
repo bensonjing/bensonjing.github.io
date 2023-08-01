@@ -30,11 +30,10 @@
 
 .post_abstract {
   margin-bottom: 0.8rem;
-  color: var(--secondary-dark);
 }
 
 .post_link:hover {
-  color: var(--secondary-dark);
+  color: var(--secondary-light);
 }
 
 .categories {

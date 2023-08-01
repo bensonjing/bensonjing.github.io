@@ -22,5 +22,10 @@ Visit the website at [www.bensonjing.com](https://www.bensonjing.com)
 - [ ] Display date on blog posts
 
 ## Notes  
+Insperation for personal website: 
+- [Hillel Fuld](https://www.hillelfuld.com/)
+
 Insperation for blog:  
 - [Anders Aarvik](https://aarvik.dk/)
+- [Greg Jorgensen](https://typicalprogrammer.com/)
+- [Bear](https://blog.bear.app/)

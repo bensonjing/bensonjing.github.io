@@ -8,7 +8,6 @@
 .post {
   max-width: 50vw;
   margin: 0 auto;
-	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 1.2rem;
 	font-weight: 100;
 	line-height: 1.8em;
@@ -16,7 +15,7 @@
 
 .title {
 	text-align: center; 
-	margin: 7vh 0;
+	margin: 10vh 0;
 }
 
 .body h2 {
@@ -28,4 +27,22 @@
 	border: 1.5px solid #d2d2cd;
 	border-radius: 10px;
 	padding: 1rem;
+	color: #464645;
+}
+
+.body strong {
+	color: black;
+}
+
+.body p {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #464645;
+}
+
+.body a {
+	color: blue;
+}
+
+.body pre {
+	white-space: pre-wrap;
 }
