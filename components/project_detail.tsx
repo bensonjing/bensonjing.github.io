@@ -13,7 +13,9 @@ export default function ProjectDetail({
 }: project) {
   return (
     <article className={styles.detail}>
-      <img src={image} alt={name} />
+      <div className={styles.image_container}>
+        <img className={styles.image} src={image} alt={name} />
+      </div>
       <div className={styles.text}>
         <div>
           <h3>{name}</h3>

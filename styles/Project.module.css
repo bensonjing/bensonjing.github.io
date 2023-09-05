@@ -17,14 +17,21 @@
   height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.image_container {
+  display: flex;
+  height: 60%;
+}
+
+.image {
+  width: 100%;
 }
 
 .text {
-  height: 12rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-top: auto;
 }
 
 .link {

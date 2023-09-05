@@ -14,7 +14,7 @@ export interface project {
 export default function Projects() {
   const projects = [
     {
-      image: '/logo-dark.svg',
+      image: '/personal-website.png',
       name: 'Personal Website',
       description:
         'A website for documenting and showcasing my projects and blogs',
@@ -22,27 +22,19 @@ export default function Projects() {
       code: 'https://github.com/bensonjing/bensonjing.github.io/',
     },
     {
-      image: '/logo-dark.svg',
-      name: 'Blog API',
-      description: 'The backend API for my personal blog',
-      link: 'https://www.bensonjing.com/blog/',
-      code: 'https://github.com/bensonjing/blog-api/',
+      image: '/peter-portal.png',
+      name: 'PeterPortal API',
+      description: 'The backend API that provides UCI public data access',
+      link: 'https://api.peterportal.org/',
+      code: 'https://github.com/icssc/peterportal-api-next',
     },
     {
-      image: '/logo-dark.svg',
+      image: '/antimony.jpg',
       name: 'Antimony Meter App',
       description:
         'An app for analyzing the concentration of Antimony based on the colorimetry',
       link: 'https://github.com/bensonjing/chem-app-client/',
       code: 'https://github.com/bensonjing/chem-app-api/',
-    },
-    {
-      image: '/logo-dark.svg',
-      name: 'Bouncing Ball Game',
-      description:
-        'a game in which user can create different ball objects and interact with each other',
-      link: 'https://github.com/bensonjing/bouncing-ball-game/',
-      code: 'https://github.com/bensonjing/bouncing-ball-game/',
     },
   ];
 
